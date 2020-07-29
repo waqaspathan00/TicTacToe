@@ -226,17 +226,24 @@ public class Board {
         row5 = sec7 + "|" + sec8 + "|" + sec9;
     }
 
-    //this method prints the tictactoe board
-    public void printBoard(){
+    /** Prints out the tictactoe board
+     *
+     * @return null;
+     */
+    public String printBoard(){
         System.out.println(row1);
         System.out.println(row2);
         System.out.println(row3);
         System.out.println(row4);
         System.out.println(row5);
         System.out.println();
+
+        return null;
     }
 
-    public void printError(int row, int column){
+    public String printError(int row, int column){
         System.out.println("This move at (" + row + "," + column + ") is not valid. Try again...");
+
+        return null;
     }
 }
