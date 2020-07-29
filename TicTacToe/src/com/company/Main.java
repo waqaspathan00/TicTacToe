@@ -10,6 +10,7 @@ public class Main {
 
     public static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
+
         Board board = new Board();
         boolean alternatePlayer = true; // variable that allows alteration between players
         boolean gameWon = false;        // variable that will change to true once the game is won
@@ -19,10 +20,11 @@ public class Main {
         int position;       // final position calculated off the rowChoice and columnChoice
         int turnCount = 1;  // incrementing turn variable which will terminate the game once it becomes greater than 9
 
-
-        // the test cases for this while loop:
-        // 1) if the 3 in a row requirement is met
-        // 2) if a draw is met OR if 9 turns have passed, the latter seems like a better option
+        /**
+         * Before commencing the loop checks for:
+         * 1) if the 3 in a row requirement is met
+         * 2) if a draw is met OR if 9 turns have passed, the latter seems like a better option
+         */
         while((!gameWon) && (turnCount <= 9)){
 
             // taking in the users choice for their row and column
@@ -68,9 +70,14 @@ public class Main {
         }
     }
 
-    // playerTurn alternates between player X and player O
-    // if the incoming boolean value is true then it is player X's turn and vice versa
-    // the value of the boolean value gets changed in the while loop
+    /**
+     * alternates the turns between player X and player O
+     * if the incoming boolean value is true then it is player X's turn and vice versa
+     * the value of the boolean value itself gets changed in the while loop
+     *
+     * @param alternatePlayer
+     * @return alternating values between X and O.
+     */
     public static char playerTurn (boolean alternatePlayer){
         if (alternatePlayer){
             return 'X';
