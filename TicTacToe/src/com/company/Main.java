@@ -47,7 +47,7 @@ public class Main {
             board.printBoard();
 
             // will test to see if the game has been won yet
-            gameWon = board.gameWon(board);
+            gameWon = board.gameWon();
             if (gameWon){
                 System.out.println("Player '" + player + "' won!");
             }
