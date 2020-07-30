@@ -37,7 +37,10 @@ public class Main {
 
             // if they entered an invalid position, restart the loop
             if (board.validatePosition(position)){
-                board.printError(rowChoice, columnChoice);
+                // print line for test purposes
+                System.out.println(board.printError(rowChoice, columnChoice));
+
+                //board.printError(rowChoice, columnChoice);
                 continue;
             }
             if (position == -1){
@@ -46,7 +49,10 @@ public class Main {
 
             // if everything is valid assign their letter to their position of choosing
             board.assignPosition(player, position);
-            board.printBoard();
+            //board.printBoard();
+
+            // print line for testing purposes
+            System.out.println(board.printBoard());
 
             // will test to see if the game has been won yet
             gameWon = board.gameWon();

@@ -179,11 +179,7 @@ public class Board {
      * if one of those values is equal to the position the player chose then they will have to try again
      */
     public boolean validatePosition(int position){
-        if (takenPositions.contains(position)){
-            return true;
-        }
-
-        return false;
+        return takenPositions.contains(position);
     }
 
     /**
@@ -192,6 +188,7 @@ public class Board {
      * the outer switch represents the row, the inner switch represents the column
      */
     public int determinePosition(int row, int column){
+
         switch (row){
             case 1:
                 switch (column){
@@ -222,7 +219,10 @@ public class Board {
                 }
         }
 
-        printError(row, column);
+        //print line for testing purposes
+        System.out.println(printError(row, column));
+
+        //printError(row, column);
         return -1;
     }
 
