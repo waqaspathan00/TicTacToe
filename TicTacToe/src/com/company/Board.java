@@ -243,14 +243,14 @@ public class Board {
      * @return is temporarily null as a testing measure
      */
     public String printBoard(){
-        System.out.println(row1);
-        System.out.println(row2);
-        System.out.println(row3);
-        System.out.println(row4);
-        System.out.println(row5);
-        System.out.println();
+        return (row1 + "\n" + row2 + "\n" + row3 + "\n" + row4 + "\n" + row5 + "\n");
 
-        return null;
+//        System.out.println(row1);
+//        System.out.println(row2);
+//        System.out.println(row3);
+//        System.out.println(row4);
+//        System.out.println(row5);
+//        System.out.println();
     }
 
     /**
@@ -261,8 +261,6 @@ public class Board {
      * @return is temporarily null as a testing measure
      */
     public String printError(int row, int column){
-        System.out.println("This move at (" + row + "," + column + ") is not valid. Try again...");
-
-        return null;
+        return ("This move at (" + row + "," + column + ") is not valid. Try again...");
     }
 }
