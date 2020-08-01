@@ -308,8 +308,6 @@ class BoardTest {
         board.assignPosition(x, 9);
         assertFalse(board.gameWon());
 
-        board = new Board();
-
     }
 
     @Test
@@ -317,47 +315,79 @@ class BoardTest {
 
         Board board = new Board();
 
+        assertFalse(board.validatePosition(1));
         board.assignPosition(x, 1);
         assertTrue(board.validatePosition(1));
+
+        assertFalse(board.validatePosition(2));
         board.assignPosition(x, 2);
         assertTrue(board.validatePosition(2));
+
+        assertFalse(board.validatePosition(3));
         board.assignPosition(x, 3);
         assertTrue(board.validatePosition(3));
+
+        assertFalse(board.validatePosition(4));
         board.assignPosition(x, 4);
         assertTrue(board.validatePosition(4));
+
+        assertFalse(board.validatePosition(5));
         board.assignPosition(x, 5);
         assertTrue(board.validatePosition(5));
+
+        assertFalse(board.validatePosition(6));
         board.assignPosition(x, 6);
         assertTrue(board.validatePosition(6));
+
+        assertFalse(board.validatePosition(7));
         board.assignPosition(x, 7);
         assertTrue(board.validatePosition(7));
+
+        assertFalse(board.validatePosition(8));
         board.assignPosition(x, 8);
         assertTrue(board.validatePosition(8));
+
+        assertFalse(board.validatePosition(9));
         board.assignPosition(x, 9);
         assertTrue(board.validatePosition(9));
 
         board = new Board();
 
+        assertFalse(board.validatePosition(1));
         board.assignPosition(o, 1);
         assertTrue(board.validatePosition(1));
+
+        assertFalse(board.validatePosition(2));
         board.assignPosition(o, 2);
         assertTrue(board.validatePosition(2));
+
+        assertFalse(board.validatePosition(3));
         board.assignPosition(o, 3);
         assertTrue(board.validatePosition(3));
+
+        assertFalse(board.validatePosition(4));
         board.assignPosition(o, 4);
         assertTrue(board.validatePosition(4));
+
+        assertFalse(board.validatePosition(5));
         board.assignPosition(o, 5);
         assertTrue(board.validatePosition(5));
+
+        assertFalse(board.validatePosition(6));
         board.assignPosition(o, 6);
         assertTrue(board.validatePosition(6));
+
+        assertFalse(board.validatePosition(7));
         board.assignPosition(o, 7);
         assertTrue(board.validatePosition(7));
+
+        assertFalse(board.validatePosition(8));
         board.assignPosition(o, 8);
         assertTrue(board.validatePosition(8));
+
+        assertFalse(board.validatePosition(9));
         board.assignPosition(o, 9);
         assertTrue(board.validatePosition(9));
-
-        board = new Board();
 
     }
 }
